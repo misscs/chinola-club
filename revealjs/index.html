@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Expressing yourself with RevealJs</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./css/theme/night.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+
+# Express yourself with Reveal JS
+
+Use this presentation to help inspire yours. View the source to see
+how it is done.
+</script></section><section  data-markdown><script type="text/template">
+> Good artist take, Great artists steal.
+</script></section><section  data-markdown><script type="text/template">
+## Adding a Slide
+
+A slide is a container. Add your content in between the opening and closing `section` tag
+
+```
+<section>
+
+</section>
+```
+</script></section><section  data-markdown><script type="text/template">
+### Give your slides a unique class
+
+Give each of your slides a class to identify it. Use the class to style the
+background of the slide.
+</script></section><section  data-markdown><script type="text/template">
+#### Add solid background color
+
+Add emphasis and make text and images pop
+</script></section><section  data-markdown><script type="text/template">
+#### Add background images
+
+Add an opaque box around content to add depth
+</script></section><section  data-markdown><script type="text/template">
+### Use slide class to target css
+
+```
+h1 {
+  // all h1 get these styles
+}
+
+.intro-slide h1 {
+  // only the h1 on the intro slide will get these styles
+}
+```
+</script></section><section  data-markdown><script type="text/template">
+### Tell one story per slide
+
+Use header tags `h1` or `h2` tags to introduce the topic of your slide.
+
+```
+<section class="intro-slide">
+
+<h1>Presentation about presentations</h1>
+
+</section>
+```
+</script></section><section  data-markdown><script type="text/template">
+# Use images
+
+Images tell a powerful story.
+
+</script></section><section  data-markdown><script type="text/template">
+# Position your images in different places on the screen
+</script></section><section  data-markdown><script type="text/template">
+### Change text color
+
+```css
+p {
+  color: blue;
+}
+
+```
+</script></section><section  data-markdown><script type="text/template">
+### Resources for colors
+
+</script></section><section  data-markdown><script type="text/template">
+### Resources for backgrounds
+</script></section><section  data-markdown><script type="text/template">
+# Inspiration
+
+Other projects made using the same tools:
+
+* http://marinaroot.github.io/#/
+* http://evgeny-romanchenko.com/
+* http://rollingstones.vizzuality.com/
+
+
+<aside class="notes"><p>Not using templates is where you inject your creativity</p>
+</aside></script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"slide"};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+
+    </body>
+</html>
